@@ -1,6 +1,6 @@
 # Poker_bot
 Attempt to make poker bots using chance sampling CFR.
-<br> An overview of CFR theory is provided (source: http://modelai.gettysburg.edu/2013/cfr/cfr.pdf). 
+<br><br> An overview of CFR theory is provided (source: http://modelai.gettysburg.edu/2013/cfr/cfr.pdf). 
 <br><br> Bots are implemented for two simple poker games, Kuhn poker and Leduc poker:
 ### Kuhn poker
 Kuhn poker is a very simple form of poker developed by Harold Kuhn. It is a zero sum, two player game of imperfect information. Before dealing, both players ante 1 chip into the pot. Three different cards (e.g. 0, 1 and 2) are shuffled and one card is dealt to each player face down. The players look at their own cards (but do not know their opponent's cards) and play alternates starting with player 1. On each turn, a player may either _pass_ or _bet_. A _pass_ passes the action to the other player without putting any more chips into the pot. A player that _bets_ places another chip into the pot. After two successive passes or bets, the players show their cards and the player with the highest card wins and takes all the chips in the pot. If a player passes after the other has bet, then the chips go to the player that bet.
