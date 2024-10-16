@@ -207,8 +207,28 @@ class Leduc:
 
 class InformationSet:
 
-    """Each instance of this class represents an Information set which contains an active player and all information available
-    to that active player at that decision in the game, and can possibly include more than one game state."""
+    """Each instance of this class represents an information set, which contains the relevant state and 
+    available information for a player at a particular decision point in the game. It can represent multiple 
+    game states that are indistinguishable to the player.
+
+    Each information set stores several key variables:
+
+    - strategy: Current probability distribution over the possible actions the player can take at this information set. 
+    It is updated every time the information set is visited using positive regret matching based on the regret_sum.
+
+    - strategy_sum: Cumulative sum of the strategies used at this information set across all iterations. It is updated 
+    every time the information set is visited by adding the current strategy, weighted by the reach probability.
+
+    - regret_sum: Cumulative counterfactual regret for each action at this information set. It tracks how much better
+    the player could have done by choosing a different action. Updated each time the information set is visited by adding
+    regrets weighted by the reach probability of the opponent.
+
+    - reach_pr: Tracks how often this information set is reached during the game. It is essentially the product of the
+    probabilities of all the players' actions that led to this information set. This is reset after each iteration.
+
+    - sum_reach_pr: Cumulative sum of the reach probabilities over all iterations for this information set. 
+    Used to normalize the final average strategy.
+    """
 
     def __init__(self, key, num_actions):
         self.key = key  # unique identifier for an information set (player card + community card + history)
