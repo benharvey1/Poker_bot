@@ -233,11 +233,11 @@ class InformationSet:
     def __init__(self, key, num_actions):
         self.key = key  # unique identifier for an information set (player card + community card + history)
         self.num_actions = num_actions
-        self.regret_sum = np.zeros(self.num_actions)    # cumulated counterfactual regret of not choosing an action in the information set
-        self.strategy_sum = np.zeros(self.num_actions)  # used to calculate average strategy
-        self.strategy = np.repeat(1/self.num_actions, self.num_actions) # strategy for a given information set
-        self.reach_pr = 0   # sum of probabilities for reaching information set over all possible histories in the information set
-        self.sum_reach_pr = 0   # sum of above over all iterations
+        self.regret_sum = np.zeros(self.num_actions)
+        self.strategy_sum = np.zeros(self.num_actions)
+        self.strategy = np.repeat(1/self.num_actions, self.num_actions)
+        self.reach_pr = 0 
+        self.sum_reach_pr = 0
 
     def update_strategy(self):
         """Updates strategy (sum) to include the contribution of the current strategy weighted by how likely this 
