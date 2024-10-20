@@ -11,4 +11,8 @@ Leduc poker is a slight extension of Kuhn poker. There are now 6 cards in the de
 
 ### Two card poker
 We now deal with a full deck of 52 cards and players have stacks of 100 chips. Each player antes 1 chip into the pot and is dealt two cards. Play alternates starting with player 1. When playing first or facing a check from the other player, a player can either check or bet half or full pot. When facing a bet, a player can fold, call or raise by the size of the pot. Play continues until one player folds, a player calls the other or an all in occurs. 
+<br><br> Training this bot using the CFR+ algorithm with chance sampling for 1,000,000 hands we find the following optimal betting frequency for player 1 when starting the hand:
+![Alt text](TwoCardPoker/Player_1_betting_frequency.png)
+
+
 
