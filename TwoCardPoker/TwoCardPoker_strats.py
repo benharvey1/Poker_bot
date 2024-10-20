@@ -59,7 +59,7 @@ sns.heatmap(ranges, annot=hands_array, fmt='', cmap='Greens')
 plt.title("Player 1 betting frquency")
 plt.xticks([])
 plt.yticks([])
-plt.savefig(r"C:\Users\harve\OneDrive\Documents\Python\VScodeprojects\Poker bot\TwoCardPoker\Player_1_betting_frequency.png")
+plt.savefig('Player_1_betting_frequency.png')
 
 
 
