@@ -10,8 +10,8 @@ Leduc poker is a slight extension of Kuhn poker. There are now 6 cards in the de
 <br> After the first betting round is finished and if no one has folded, one card is randomly chosen from the remaining 4 cards and dealt in the flop. The flop card is then combined with each of the players' pocket card to make up for their hand. The ranks work as in Texas Hold'em, with pairs beating high cards. When the flop is dealt, there's a second betting round, in which the same rules as in the first betting round apply. If the showdown is reached, the player with the highest ranked hand wins the pot.
 
 ### Two card poker
-We now deal with a full deck of 52 cards and players have stacks of 100 chips. Each player antes 1 chip into the pot and is dealt two cards. Play alternates starting with player 1. When playing first or facing a check from the other player, a player can either check or bet half or full pot. When facing a bet, a player can fold, call or raise by the size of the pot. Play continues until one player folds, a bet is called or an all in occurs. If showdown is reached, a pocket pair beats suited cards which beats off-suited cards.
-<br><br> Training this bot using the CFR+ algorithm with chance sampling for 1,000,000 hands we find the following optimal betting frequency for player 1 when starting the hand:
+We now deal with a full deck of 52 cards and players have finite stacks of chips. Each player antes 1 chip into the pot and is dealt two cards. Play alternates starting with player 1. When playing first or facing a check from the other player, a player can either check or bet half or full pot. When facing a bet, a player can fold, call or raise by the size of the pot. Play continues until one player folds, a bet is called or an all in occurs. If showdown is reached, a pocket pair beats suited cards which beats off-suited cards.
+<br><br> Training this bot using the CFR+ algorithm with chance sampling for 10,000,000 hands with starting stacks of 32 chips we find the following optimal betting frequency for player 1 when starting the hand:
 ![Alt text](TwoCardPoker/Player_1_betting_frequency.png)
 
 
