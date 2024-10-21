@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 class TwoCardPoker:
 
-    def __init__(self, stack_size=100, ante=1):
+    def __init__(self, stack_size=32, ante=1):
         self.i_map = {} # dictionary that stores all possible information sets
         self.strategies = {}
         self.expected_game_value = 0
