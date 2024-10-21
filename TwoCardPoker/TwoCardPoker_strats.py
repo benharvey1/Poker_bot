@@ -20,7 +20,7 @@ hands_array = np.array([
 ])
 
 trainer = TwoCardPoker()
-player_1_strat, player_2_strat = trainer.train(1000000)
+player_1_strat, player_2_strat = trainer.train(10000000)
 
 action_frequencies = {key:value for key, value in player_1_strat.items() if np.isin(key, hands_array)}
 ranks = 'AKQJT98765432'
