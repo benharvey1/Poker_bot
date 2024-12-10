@@ -187,6 +187,6 @@ def display_results(ev, i_map):
     for _, v in filter(lambda x: len(x[0]) % 2 == 1, sorted_items):  # Player 2's turns
         print(f"{v.key}: {v.get_average_strategy()}")  # Call the method to get the average strategy
 
-
-trainer = Kuhn()
-trainer.train(n_iterations=100000)
+if __name__ == "__main__":
+    trainer = Kuhn()
+    trainer.train(n_iterations=100000)
