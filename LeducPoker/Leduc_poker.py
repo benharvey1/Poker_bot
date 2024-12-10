@@ -290,6 +290,6 @@ def display_results(ev, i_map):
     print(f'Player 1 strategies: {player_1_strategy}')
     print(f'Player 2 strategies: {player_2_strategy}')
 
-
-trainer = Leduc()
-trainer.train(n_iterations=10000)
+if __name__ == "__main__":
+    trainer = Leduc()
+    trainer.train(n_iterations=10000)
