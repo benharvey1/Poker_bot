@@ -415,6 +415,6 @@ def display_results(i_map):
     return player_1_strategy, player_2_strategy
 
     
-
-trainer = TwoCardPoker()
+if __name__ == "__main__":
+    trainer = TwoCardPoker()
 
